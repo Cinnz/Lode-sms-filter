@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Sms Reader
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="showOptions()">
+              <ion-icon name="ios-options-outline"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding no-bounce>
+    <div class="sms-container">
+        <!-- <div class=sms *ngFor="let sms of mSms" [class.data-sms]="sms.lo.length > 0 || sms.db.length > 0 || sms.xien.length > 0 || sms.xienQuay.length > 0" (click)="onClickSms(sms)">{{sms.address}}: {{sms.content}}</div> -->
+        <div class="sms-date" *ngFor="let item of mSmSItems">
+            <div class="time">{{item.timeStr}}</div>
+            <div padding>
+                <div class=sms *ngFor="let sms of item.sms" [class.data-sms]="sms.lo.length > 0 || sms.db.length > 0 || sms.xien.length > 0 || sms.xienQuay.length > 0" (click)="onClickSms(sms)">{{sms.address}}: {{sms.content}}</div>
+            </div>
+
+        </div>
+    </div>
+    <button ion-button full color="dark" (click)="ReadMoreSMS()">Read more</button>
+</ion-content>

@@ -1,0 +1,68 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>{{mSms.address}}</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="onClickReset()">
+            <ion-icon name="ios-refresh-outline"></ion-icon>
+          </button>
+            <button ion-button icon-only (click)="onClickSave()">
+            <ion-icon name="ios-checkmark-outline"></ion-icon>
+          </button>
+        </ion-buttons>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding no-bounce>
+    <div class="sms-filter">
+        <div *ngIf="mLo.length>0">
+            <div class="item-title">Lô</div>
+            <div class="item-container">
+                <ion-grid>
+                    <ion-row class="item" *ngFor="let lo of mLo">
+                        <ion-col>{{lo.number}}</ion-col>
+                        <ion-col>x{{lo.value}}</ion-col>
+                    </ion-row>
+                </ion-grid>
+            </div>
+        </div>
+        <div *ngIf="mDb.length>0">
+            <div class="item-title">Đề</div>
+            <div class="item-container">
+                <ion-grid>
+                    <ion-row class="item" *ngFor="let db of mDb">
+                        <ion-col>{{db.number}}</ion-col>
+                        <ion-col>x{{db.value}}</ion-col>
+                    </ion-row>
+                </ion-grid>
+            </div>
+        </div>
+        <div *ngIf="mXien.length>0">
+            <div class="item-title">Lô xiên</div>
+            <div class="item-container">
+                <ion-grid>
+                    <ion-row class="item" *ngFor="let xien of mXien">
+                        <ion-col>{{xien.number}}</ion-col>
+                        <ion-col>x{{xien.value}}</ion-col>
+                    </ion-row>
+                </ion-grid>
+            </div>
+        </div>
+        <div *ngIf="mXienQuay.length>0">
+            <div class="item-title">Xiên Quay</div>
+            <div class="item-container">
+                <ion-grid>
+                    <ion-row class="item" *ngFor="let xien of mXienQuay">
+                        <ion-col>{{xien.number}}</ion-col>
+                        <ion-col>x{{xien.value}}</ion-col>
+                    </ion-row>
+                </ion-grid>
+            </div>
+        </div>
+    </div>
+    <div class="content-container">
+        <ion-textarea id="content" [(ngModel)]="mSms.fixedContent" (input)="reviewChange()"></ion-textarea>
+    </div>
+</ion-content>

@@ -1,0 +1,18 @@
+page-home {
+    .sms-container {
+        width: 100%;
+        height: 300px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        border: 1px solid lightgrey;
+        .sms {
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+            background-color: lightgrey;
+        }
+        .data-sms {
+            background-color: #b1ecb1 !important;
+        }
+    }
+}

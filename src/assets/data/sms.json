@@ -1,0 +1,21 @@
+{
+    "syntax": [{
+        "id": 0,
+        "name": "Lô",
+        "keys": ["lo"]
+    }, {
+        "id": 1,
+        "name": "Đề",
+        "keys": ["db", "de"]
+    }, {
+        "id": 2,
+        "name": "Xiên quay",
+        "keys": ["xien quay"]
+    }, {
+        "id": 3,
+        "name": "Lô xiên",
+        "keys": ["xien"]
+    }],
+    "units": ["n", "diem", "k"],
+    "join_char": ["x", "-"]
+}
